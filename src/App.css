@@ -19,3 +19,16 @@
   border-radius: 2px;
   background-color: white;
 }
+.buttonn{
+  background-color: blueviolet;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: whitesmoke;
+}
+.ulStyles{
+background-color: greenyellow;
+display: block;
+width: 10rem;
+}
