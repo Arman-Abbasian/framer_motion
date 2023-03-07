@@ -5,7 +5,9 @@ import Box3 from './components/Box3';
 import {Box4} from './components/Box4';
 import Box5 from './components/Box5';
 import Box6 from './components/Box6';
+import Doc1 from './components/Documentation/Doc1';
 import Menu from './components/Menu';
+import Scroll1 from './components/Scroll/Scroll1';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       <Box4 />
       <Box5 />
       <Box6 /> */}
-      <Menu />
+      {/* <Menu /> */}
+      {/* <Scroll1 /> */}
+      <Doc1 />
     </div>
   );
 }

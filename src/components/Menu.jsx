@@ -32,12 +32,12 @@ const Menu = () => {
 
   const item = {
     initial: {
-        opacity: 0,
-        x: "-100vw",
-        transition: {
-          duration: 1,
-        },
+      opacity: 0,
+      x: "-100vw",
+      transition: {
+        duration: 1,
       },
+    },
     hidden: { x: "-100vw" },
     visible: {
       x: 0,

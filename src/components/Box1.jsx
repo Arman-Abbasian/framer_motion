@@ -10,12 +10,12 @@ const Box1 = () => {
       },
     },
     end: {
-      x: isAnimating ? 400:0,
-      opacity: isAnimating ? 1:0.5,
-      rotate: isAnimating ? 360:0,
+      x: isAnimating ? 400 : 0,
+      opacity: isAnimating ? 1 : 0.5,
+      rotate: isAnimating ? 360 : 0,
       transition: {
         type: "tween",
-        duration:1,
+        duration: 1,
       },
     },
   };
@@ -26,7 +26,7 @@ const Box1 = () => {
         variants={boxVariants}
         initial="start"
         animate="end"
-        onClick={()=>setIsAnimating(!isAnimating)}
+        onClick={() => setIsAnimating(!isAnimating)}
       ></motion.div>
     </div>
   );
