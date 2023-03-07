@@ -5,7 +5,7 @@ import Box3 from './components/Box3';
 import {Box4} from './components/Box4';
 import Box5 from './components/Box5';
 import Box6 from './components/Box6';
-import Doc1 from './components/Documentation/Doc1';
+import Doc1 from './components/Documentation/Introduction';
 import Menu from './components/Menu';
 import Scroll1 from './components/Scroll/Scroll1';
 

@@ -1,8 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 
 const list = { hidden: { opacity: 0.5, x: 0 } };
 const item = { hidden: { x: 40, opacity: 1 } };
-const Doc1 = () => {
+
+const Introduction = () => {
+  const x = useMotionValue(0)
+  const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
+
   return (
     <div className="container">
       <motion.div
@@ -24,16 +28,15 @@ const Doc1 = () => {
           <motion.li />
         </motion.ul>
       </motion.div>
+      <motion.div className="box-container" drag="x" style={{ x, opacity }} />
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
         illum!
@@ -42,26 +45,10 @@ const Doc1 = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-      </motion.div>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
         illum!
@@ -70,26 +57,10 @@ const Doc1 = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-      </motion.div>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
-        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
         illum!
@@ -98,12 +69,34 @@ const Doc1 = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
-        illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
         illum!
+      </motion.div>
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum!
+      </motion.div>
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1,transition:{duration:1} }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
+        aut. Quae unde maxime quos minima aliquid commodi beatae inventore
+        illum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         deserunt sequi dicta dolore distinctio itaque quia voluptatem vitae! Ea,
         aut. Quae unde maxime quos minima aliquid commodi beatae inventore
         illum!
@@ -112,4 +105,4 @@ const Doc1 = () => {
   );
 };
 
-export default Doc1;
+export default Introduction;
