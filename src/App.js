@@ -5,6 +5,7 @@ import Box3 from './components/Box3';
 import {Box4} from './components/Box4';
 import Box5 from './components/Box5';
 import Box6 from './components/Box6';
+import Gestures from './components/Documentation/Animation/Gestures';
 import Overview from './components/Documentation/Animation/Overview';
 import Examples from './components/Documentation/Examaples';
 import Doc1 from './components/Documentation/Introduction';
@@ -24,7 +25,8 @@ function App() {
       {/* <Scroll1 /> */}
       {/* <Doc1 /> */}
       {/* <Examples /> */}
-      <Overview />
+      {/* <Overview /> */}
+      <Gestures />
     </div>
   );
 }

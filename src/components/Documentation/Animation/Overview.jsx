@@ -38,17 +38,17 @@ const Overview = () => {
   useEffect(() => {
     const animation = animate(count, 100, { duration: 5 });
   }, []);
-  const x = useMotionValue(0)
+  const x = useMotionValue(0);
 
   useEffect(() => {
     const controls = animate(x, 100, {
       type: "spring",
       stiffness: 2000,
-      onComplete: v => {}
-    })
-  
-    return controls.stop
-  })
+      onComplete: (v) => {},
+    });
+
+    return controls.stop;
+  });
   return (
     <>
       <div>
@@ -100,7 +100,6 @@ const Overview = () => {
         );
       })}
       <motion.div>{rounded}</motion.div>
-      <motion.div animate={{controls}}></motion.div>
     </>
   );
 };
