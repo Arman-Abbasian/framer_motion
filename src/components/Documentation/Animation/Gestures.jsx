@@ -50,6 +50,12 @@ const Gestures = () => {
       >
         <motion.div className="child-box-container" />
       </motion.div>
+      <motion.div
+        className="box-container"
+        drag
+        dragDirectionLock
+        onDirectionLock={(axis) => console.log(axis)}
+      />
     </div>
   );
 };
