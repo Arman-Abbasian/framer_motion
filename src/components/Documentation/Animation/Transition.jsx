@@ -45,7 +45,30 @@ const Transition = () => {
       <motion.div
         className="box-container"
         animate={{ scale: [0, 1, 0.5, 1] }}
-        transition={{duration:4, times: [0, 0.3, 0.9, 1] }}
+        transition={{ duration: 4, times: [0, 0.3, 0.9, 1] }}
+      />
+      <motion.div
+        className="box-container"
+        animate={{ x: 100 }}
+        transition={{ type: "spring", duration: 4.8, bounce: 30.25 }}
+      />
+      <motion.a
+        className="box-container"
+        style={{ backgroundColor: "red" }}
+        animate={{ x: 180 }}
+        transition={{
+          type: "spring",
+          damping: 1,
+          mass: 1.5,
+          stiffness: 100,
+          velocity: 100,
+        }}
+      />
+      <motion.a
+        className="box-container"
+        style={{ backgroundColor: "green" }}
+        animate={{ x: 180 }}
+        transition={{ type: "spring",duration:6, restSpeed: 20.5,restDelta: 0.5 }}
       />
     </div>
   );
