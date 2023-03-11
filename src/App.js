@@ -7,6 +7,8 @@ import Box5 from './components/Box5';
 import Box6 from './components/Box6';
 import Gestures from './components/Documentation/Animation/Gestures';
 import Overview from './components/Documentation/Animation/Overview';
+import Scroll from './components/Documentation/Animation/Scroll';
+import Transition from './components/Documentation/Animation/Transition';
 import Examples from './components/Documentation/Examaples';
 import Doc1 from './components/Documentation/Introduction';
 import Menu from './components/Menu';
@@ -26,7 +28,9 @@ function App() {
       {/* <Doc1 /> */}
       {/* <Examples /> */}
       {/* <Overview /> */}
-      <Gestures />
+      {/* <Gestures /> */}
+      {/* <Scroll /> */}
+      <Transition />
     </div>
   );
 }
