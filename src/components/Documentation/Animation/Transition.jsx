@@ -68,8 +68,38 @@ const Transition = () => {
         className="box-container"
         style={{ backgroundColor: "green" }}
         animate={{ x: 180 }}
-        transition={{ type: "spring",duration:6, restSpeed: 20.5,restDelta: 0.5 }}
+        transition={{
+          type: "spring",
+          duration: 6,
+          restSpeed: 20.5,
+          restDelta: 0.5,
+        }}
       />
+      <motion.div
+        className="box-container"
+        style={{ backgroundColor: "gray" }}
+        animate={{ x: 380 }}
+        transition={{ type: "inertia", velocity: 50 }}
+      />
+      <div style={{ backgroundColor: "brown" }}>
+        <motion.div
+          className="box-container"
+          style={{ backgroundColor: "blue" }}
+          animate={{ x: 380 }}
+          transition={{ type: "inertia", velocity: 500 }}
+          drag
+          dragTransition={{
+            min: 0,
+            max: 0,
+            bounceStiffness: 200,
+            bounceDamping: 3,
+            power: 0.1,
+            timeConstant: 700,
+            restDelta: 0,
+          }}
+          onTransitionEnd
+        />
+      </div>
     </div>
   );
 };
